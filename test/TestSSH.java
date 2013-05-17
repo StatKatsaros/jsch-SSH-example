@@ -5,7 +5,7 @@ public class TestSSH {
         //command to be sent to remote machine
         String command = "ls -la";
         //SSH Instance... using generic user/password/server name
-        instance = new VaderSSHManager("username", "password", "server", "");
+        instance = new SSHManager("username", "password", "server", "");
         //connect to server
         String errorMessage = instance.connect();
         if(errorMessage != null){
