@@ -1,5 +1,3 @@
-package testssh;
-
 import com.jcraft.jsch.*;
 import java.io.IOException;
 import java.io.InputStream;
@@ -9,7 +7,7 @@ import java.util.logging.Logger;
 public class SSHManager {
 
     private static final Logger LOGGER =
-            Logger.getLogger(VaderSSHManager.class.getName());
+            Logger.getLogger(SSHManager.class.getName());
     private JSch jschSSHChannel;
     private String strUserName;
     private String strConnectionIP;
