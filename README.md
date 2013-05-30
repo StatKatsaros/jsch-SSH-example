@@ -1,6 +1,6 @@
 ## Java Native SSH (jsch) Examples
 
-### NOTE: Source and Examples coming in the next few days!!
+### NOTE: More examples in the coming days.
 
 ### Overview
 Before taking the time to figure out the jsch library, I was naively invoking
