@@ -1,5 +1,5 @@
-public class TestSSH {
-    VaderSSHManager instance;
+public class SSHExample {
+    SSHManager instance;
 
     public static void main(String[] args) {
         //command to be sent to remote machine

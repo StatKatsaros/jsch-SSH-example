@@ -1,7 +1,5 @@
 ## Java Native SSH (jsch) Examples
 
-### NOTE: More examples in the coming days.
-
 ### Overview
 Before taking the time to figure out the jsch library, I was naively invoking
 plink.exe to SSH into remote machines. This worked and all, but it just felt
