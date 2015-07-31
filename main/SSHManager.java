@@ -8,6 +8,8 @@ public class SSHManager {
 
     private static final Logger LOGGER =
             Logger.getLogger(SSHManager.class.getName());
+            
+    // TODO(frankhanner): These variable names suck. Why isn't anything final?
     private JSch jschSSHChannel;
     private String strUserName;
     private String strConnectionIP;
@@ -15,7 +17,8 @@ public class SSHManager {
     private String strPassword;
     private Session sesConnection;
     private int intTimeOut;
-
+    
+    // TODO(frankhanner): This makes no sense. Have a constructor do all the work and have all other constructors use 'this(...)'
     private void doCommonConstructorActions(String userName,
             String password, String connectionIP, String knownHostsFileName) {
         jschSSHChannel = new JSch();
@@ -31,6 +34,7 @@ public class SSHManager {
         strConnectionIP = connectionIP;
     }
 
+    // TODO(frankhanner): What's up with all these magic-number timouts?
     public SSHManager(String userName, String password,
             String connectionIP, String knownHostsFileName) {
         doCommonConstructorActions(userName, password,
@@ -62,6 +66,7 @@ public class SSHManager {
             sesConnection = jschSSHChannel.getSession(strUserName,
                     strConnectionIP, intConnectionPort);
             sesConnection.setPassword(strPassword);
+            // TODO(frankhanner): this just looks dangerous
             // UNCOMMENT THIS FOR TESTING PURPOSES, BUT DO NOT USE IN PRODUCTION
             sesConnection.setConfig("StrictHostKeyChecking", "no");
             sesConnection.connect(intTimeOut);
@@ -81,6 +86,7 @@ public class SSHManager {
         return errorMessage;
     }
 
+    // TODO(fhanner): wtf does this do? looks unecessarily complicated
     private String logWarning(String warnMessage) {
         if (warnMessage != null) {
             LOGGER.log(Level.WARNING, "{0}:{1} - {2}",
